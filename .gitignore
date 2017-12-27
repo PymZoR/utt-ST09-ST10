@@ -1,0 +1,7 @@
+*.log
+*.aux
+*synctex.gz
+build/
+*.toc
+*.synctex(busy)
+*-converted-to.pdf

@@ -1,0 +1,45 @@
+\begin{tikzpicture}[remember picture,overlay]
+
+% UTT Blue square
+\coordinate [right=-1.5cm, below=-1mm] (uttsquare_anchor) at (current page.north east);
+\node [name=uttsquare,
+anchor=north east
+] at (uttsquare_anchor){
+\includegraphics[width=5.5cm]{uttsquare.eps}};
+
+% Logo UTT
+\coordinate [left=-13mm, below=-15mm] (uttlogo_anchor) at (current page.south west);
+\node [name=uttlogo,
+anchor=south west,
+] at (uttlogo_anchor){
+\includegraphics[width=8cm]{UTT.eps}};
+
+% Logo company
+\coordinate [right=-13mm, below=-15mm] (companylogo_anchor) at (current page.south east);
+\node [name=companylogo,
+anchor=south east,
+] at (companylogo_anchor){
+\includegraphics[width=7cm]{company-logo.png}};
+
+% Top-left information box
+\renewcommand{\arraystretch}{1.5}
+\coordinate [left=-13mm, below=15mm] (infobox_anchor) at (current page.north west);
+\node [name=infobox,
+anchor=north west,
+minimum height=35mm
+] at (infobox_anchor){
+\makeatletter
+\begin{large}
+\begin{tabular}{|l|l|}
+\hline
+Nom, Prénom : \@author& Branche : \@branch\\
+Responsable Pédagogique : & Année : \@date\\
+\@schooltutor & Semestre : \@semester\\
+\hline
+\end{tabular}
+\end{large}
+\makeatother
+};
+\renewcommand{\arraystretch}{1}
+
+\end{tikzpicture}

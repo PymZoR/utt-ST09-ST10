@@ -1,0 +1,109 @@
+\newcommand{\frontpage}{\include{lib/frontpage}}
+
+\def \semester#1{\gdef\@semester{#1}}
+\def \branch#1{\gdef\@branch{#1}}
+\long\def \abstracttext#1{\gdef\@abstracttext{#1}}
+\def \schooltutor#1{\gdef\@schooltutor{#1}}
+
+\def \companyname#1{\gdef\@companyname{#1}}
+\def \companyplace#1{\gdef\@companyplace{#1}}
+\def \companytutor#1{\gdef\@companytutor{#1}}
+\def \companylogo#1{\gdef\@companylogo{#1}}
+
+\def \keywordone#1{\gdef\@keywordone{#1}}
+\def \keywordone#1{\gdef\@keywordone{#1}}
+\def \keywordtwo#1{\gdef\@keywordtwo{#1}}
+\def \keywordthree#1{\gdef\@keywordthree{#1}}
+\def \keywordfour#1{\gdef\@keywordfour{#1}}
+
+% French packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+% Geometry
+\usepackage[top=2cm, bottom=2cm, left=3cm, right=3cm]{geometry}
+
+% Fonts
+\usepackage{lmodern}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Outline text
+\usepackage{fancybox}
+
+% Custom colors
+\usepackage{xcolor}
+    \definecolor{lightgray}{rgb}{.9,.9,.9}
+    \definecolor{darkgray}{rgb}{.4,.4,.4}
+    \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+% Assets path
+\usepackage{graphicx}
+    \graphicspath{{./assets/}}
+
+\usepackage{lipsum}
+\usepackage{floatrow}
+
+% Maths
+\usepackage{amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes,snakes}
+
+\usepackage{multicol}
+
+% Display code
+\usepackage{listings}
+    \definecolor{dkgreen}{rgb}{0,0.6,0}
+    \definecolor{gray}{rgb}{0.5,0.5,0.5}
+    \definecolor{mallow}{rgb}{0.58,0,0.82}
+
+    % Captions style
+    \renewcommand{\lstlistingname}{Source}
+
+    % Listing list style
+    \renewcommand\lstlistlistingname{Fichiers source}
+
+    % Custom syntax highlighting
+    \lstdefinelanguage{JavaScript}{
+      keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break class, let, const},
+      ndkeywords={class, export, boolean, throw, implements, import, this},
+      basicstyle=\ttfamily\scriptsize,
+      sensitive=false,
+      comment=[l]{//},
+      morecomment=[s]{/*}{*/},
+      morestring=[b]',
+      morestring=[b]""
+    }
+
+    \lstset{
+        language=JavaScript,
+        aboveskip=3mm,
+        belowskip=3mm,
+        showstringspaces=false,
+        columns=flexible,
+        basicstyle={\small\ttfamily},
+        numbers=none,
+        numberstyle=\tiny\color{gray},
+        keywordstyle=\color{blue},
+        commentstyle=\color{dkgreen},
+        stringstyle=\color{mallow},
+        breaklines=true,
+        breakatwhitespace=true,
+        tabsize=4,
+        frame=single
+    }
+
+% Header/footer
+\usepackage{fancyhdr}
+    \fancypagestyle{utt}{
+        \setlength{\headheight}{23.96pt}
+        \fancyfoot[C]{\thepage}
+        \fancyhead[L]{\leftmark{}}
+        \fancyhead[R]{}
+
+        % Rename table of contents
+        \addto\captionsfrench{\renewcommand{\contentsname}{Sommaire}}
+    }
+
+    \pagestyle{utt}

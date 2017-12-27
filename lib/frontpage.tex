@@ -1,0 +1,49 @@
+\begin{titlepage}.
+    \input{lib/overlay.tikz}
+
+    % Margin to begin the text under the uttsquare
+    \vspace{3cm}
+
+    % Internship title
+    \begin{Large}
+        \begin{center}
+            \textbf{Titre du stage}
+        \end{center}
+        \makeatletter
+        \noindent\@title
+        \makeatother
+    \end{Large}
+
+    \vspace{0.5cm}
+
+    % Abstract
+    \begin{large}
+        \begin{center}
+            \textbf{Résumé}
+        \end{center}
+
+        \makeatletter
+        \@abstracttext
+        \makeatother
+    \end{large}
+
+    \vspace{1.5cm}
+
+    \begin{multicols}{2}
+        \begin{Large}
+            \noindent Entreprise : \makeatletter \@companyname \makeatother\\
+            Lieu : \makeatletter \@companyplace \makeatother\\
+            Responsable : \makeatletter \@companytutor \makeatother
+
+            \columnbreak
+
+            Mots clés :
+            \begin{itemize}
+                \item \makeatletter \@keywordone \makeatother
+                \item \makeatletter \@keywordtwo \makeatother
+                \item \makeatletter \@keywordthree \makeatother
+                \item \makeatletter \@keywordfour \makeatother
+            \end{itemize}
+        \end{Large}
+    \end{multicols}
+\end{titlepage}
