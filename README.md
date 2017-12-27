@@ -1,5 +1,4 @@
 # UTT-TN09
-================================================================================
 
 Template LaTeX minimaliste pour l'écriture des rapports TN09 de l'Université de Technologie de Troyes.
 
