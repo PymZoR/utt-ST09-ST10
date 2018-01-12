@@ -5,16 +5,18 @@
 \long\def \abstracttext#1{\gdef\@abstracttext{#1}}
 \def \schooltutor#1{\gdef\@schooltutor{#1}}
 
+\def \TPE_type#1{\gdef\@TPE_type{#1}}
+
 \def \companyname#1{\gdef\@companyname{#1}}
 \def \companyplace#1{\gdef\@companyplace{#1}}
 \def \companytutor#1{\gdef\@companytutor{#1}}
 \def \companylogo#1{\gdef\@companylogo{#1}}
 
 \def \keywordone#1{\gdef\@keywordone{#1}}
-\def \keywordone#1{\gdef\@keywordone{#1}}
 \def \keywordtwo#1{\gdef\@keywordtwo{#1}}
 \def \keywordthree#1{\gdef\@keywordthree{#1}}
 \def \keywordfour#1{\gdef\@keywordfour{#1}}
+
 
 % French packages
 \usepackage[utf8]{inputenc}
@@ -51,6 +53,10 @@
 \usetikzlibrary{shapes}
 
 \usepackage{multicol}
+
+% CheckBoxes
+\usepackage[nointegrals]{wasysym}
+\usepackage{stringstrings}
 
 % Display code
 \usepackage{listings}
