@@ -58,6 +58,13 @@
 \usepackage[nointegrals]{wasysym}
 \usepackage{stringstrings}
 
+% Circled numbers and letters
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+% References in Table of Contents
+\usepackage[hidelinks]{hyperref}
+
 % Display code
 \usepackage{listings}
     \definecolor{dkgreen}{rgb}{0,0.6,0}
