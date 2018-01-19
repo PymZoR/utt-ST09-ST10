@@ -4,14 +4,14 @@
     % Margin to begin the text under the uttsquare
     \vspace{3cm}
 
-    % Internship title
+    % Report title
     \begin{Large}
         \begin{center}
-            \textbf{Titre du stage}
+            \textbf{Titre du rapport}
+            \makeatletter
+            \noindent\@title
+            \makeatother
         \end{center}
-        \makeatletter
-        \noindent\@title
-        \makeatother
     \end{Large}
 
     \vspace{0.5cm}
@@ -29,21 +29,13 @@
 
     \vspace{1.5cm}
 
-    \begin{multicols}{2}
-        \begin{Large}
-            \noindent Entreprise : \makeatletter \@companyname \makeatother\\
-            Lieu : \makeatletter \@companyplace \makeatother\\
-            Responsable : \makeatletter \@companytutor \makeatother
-
-            \columnbreak
-
-            Mots clés :
-            \begin{itemize}
-                \item \makeatletter \@keywordone \makeatother
-                \item \makeatletter \@keywordtwo \makeatother
-                \item \makeatletter \@keywordthree \makeatother
-                \item \makeatletter \@keywordfour \makeatother
-            \end{itemize}
-        \end{Large}
-    \end{multicols}
+    \begin{Large}
+        Mots clés :
+        \begin{itemize}
+            \item \makeatletter \@keywordone \makeatother
+            \item \makeatletter \@keywordtwo \makeatother
+            \item \makeatletter \@keywordthree \makeatother
+            \item \makeatletter \@keywordfour \makeatother
+        \end{itemize}
+    \end{Large}   
 \end{titlepage}
