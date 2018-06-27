@@ -2,48 +2,63 @@
     \input{lib/overlay.tikz}
 
     % Margin to begin the text under the uttsquare
-    \vspace{3cm}
+    \vspace{2.5cm}
 
     % Internship title
-    \begin{Large}
-        \begin{center}
-            \textbf{Titre du stage}
-        \end{center}
-        \makeatletter
-        \noindent\@title
-        \makeatother
-    \end{Large}
+    \begin{textblock*}{15cm}(3cm,4cm)
+        \begin{Huge}
+            \begin{center}
+                \makeatletter
+                \noindent\textcolor{white}{\@title}
+                \makeatother
+            \end{center}
+        \end{Huge}
+    \end{textblock*}
 
-    \vspace{0.5cm}
+    % Info box
+    \begin{textblock*}{15cm}(2.5cm,8cm)
+        \makeatletter
+        \begin{large}
+            \setcellgapes{4pt}
+            \makegapedcells
+            {\color{white}\begin{tabularx}{15cm}{XX}
+                \textbf{Nom, Prénom :} \@author& \textbf{Branche :} \@branch \\
+                \textbf{Responsable Pédagogique :} \newline \@schooltutor & \textbf{Semestre :} \@semester\ \@date
+            \end{tabularx}}
+        \end{large}
+        \makeatother
+    \end{textblock*}
 
     % Abstract
-    \begin{large}
-        \begin{center}
-            \textbf{Résumé}
-        \end{center}
+    \begin{textblock*}{15cm}(3cm,12cm)
+        \begin{large}
+            \begin{center}
+                \textbf{Résumé (150 mots)}
+            \end{center}
 
-        \makeatletter
-        \@abstracttext
-        \makeatother
-    \end{large}
+            \makeatletter
+            \@abstracttext
+            \makeatother
+        \end{large}
+    \end{textblock*}
 
-    \vspace{1.5cm}
+    \begin{textblock*}{15cm}(3cm,19.5cm)
+        \begin{multicols}{2}
+            \begin{large}
+                \noindent Entreprise : \makeatletter \@companyname \makeatother\\
+                Lieu : \makeatletter \@companyplace \makeatother\\
+                Responsable : \makeatletter \@companytutor \makeatother
 
-    \begin{multicols}{2}
-        \begin{Large}
-            \noindent Entreprise : \makeatletter \@companyname \makeatother\\
-            Lieu : \makeatletter \@companyplace \makeatother\\
-            Responsable : \makeatletter \@companytutor \makeatother
+                \columnbreak
 
-            \columnbreak
-
-            Mots clés :
-            \begin{itemize}
-                \item \makeatletter \@keywordone \makeatother
-                \item \makeatletter \@keywordtwo \makeatother
-                \item \makeatletter \@keywordthree \makeatother
-                \item \makeatletter \@keywordfour \makeatother
-            \end{itemize}
-        \end{Large}
-    \end{multicols}
+                Mots clés :
+                \begin{itemize}
+                    \item \makeatletter \@keywordone \makeatother
+                    \item \makeatletter \@keywordtwo \makeatother
+                    \item \makeatletter \@keywordthree \makeatother
+                    \item \makeatletter \@keywordfour \makeatother
+                \end{itemize}
+            \end{large}
+        \end{multicols}
+    \end{textblock*}
 \end{titlepage}
