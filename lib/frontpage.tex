@@ -43,21 +43,24 @@
     \end{textblock*}
 
     \begin{textblock*}{15cm}(3cm,19.5cm)
+		\setlength\columnsep{2cm}
         \begin{multicols}{2}
             \begin{large}
-                \noindent Entreprise : \makeatletter \@companyname \makeatother\\
-                Lieu : \makeatletter \@companyplace \makeatother\\
-                Responsable : \makeatletter \@companytutor \makeatother
+                \noindent \textbf{Entreprise :} \makeatletter \@companyname \makeatother\\
+                \textbf{Lieu :} \makeatletter \@companyplace \makeatother\\
+                \textbf{Responsable :} \makeatletter \@companytutor \makeatother
 
                 \columnbreak
 
-                Mots clés :
-                \begin{itemize}
+				\begin{center}
+                	{\color{white}\textbf{Mots clés :}}
+				\end{center}
+                {\color{white}\begin{itemize}
                     \item \makeatletter \@keywordone \makeatother
                     \item \makeatletter \@keywordtwo \makeatother
                     \item \makeatletter \@keywordthree \makeatother
                     \item \makeatletter \@keywordfour \makeatother
-                \end{itemize}
+                \end{itemize}}
             \end{large}
         \end{multicols}
     \end{textblock*}

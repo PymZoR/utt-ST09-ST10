@@ -21,4 +21,18 @@ anchor=south east,
 ] at (companylogo_anchor){
 \includegraphics[width=5cm]{company-logo.png}};
 
+% keywords panel
+\coordinate [right=-13mm, below=-47mm] (keywords_panel_anchor) at (current page.south east);
+\node [name=keywords_panel,
+anchor=south east,
+] at (keywords_panel_anchor){
+\includegraphics[width=9cm]{keywords-panel.png}};
+
+% company panel
+\coordinate [left=-23mm, below=-47mm] (company_panel_anchor) at (current page.south west);
+\node [name=company_panel,
+anchor=south west,
+] at (company_panel_anchor){
+\includegraphics[width=8cm,height=3.45cm]{company-panel.png}};
+
 \end{tikzpicture}
