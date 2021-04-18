@@ -14,7 +14,7 @@ anchor=south west,
 ] at (uttlogo_anchor){
 \includegraphics[width=5.5cm]{UTT.eps}};
 
-% Logo company
+%Logo company
 \coordinate [right=-13mm, below=-15mm] (companylogo_anchor) at (current page.south east);
 \node [name=companylogo,
 anchor=south east,

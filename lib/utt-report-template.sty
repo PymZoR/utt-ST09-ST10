@@ -1,7 +1,7 @@
 \newcommand{\frontpage}{\include{lib/frontpage}}
 
 \def \semester#1{\gdef\@semester{#1}}
-\def \branch#1{\gdef\@branch{#1}}
+\def \cursus#1{\gdef\@cursus{#1}}
 \long\def \abstracttext#1{\gdef\@abstracttext{#1}}
 \def \schooltutor#1{\gdef\@schooltutor{#1}}
 
@@ -41,7 +41,9 @@
     \definecolor{lightgray}{rgb}{.9,.9,.9}
     \definecolor{darkgray}{rgb}{.4,.4,.4}
     \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
-    \definecolor{white}{rgb}{1, 1, 1}
+    \definecolor{gray75}{gray}{0.75}
+    \definecolor{bleu}{HTML}{002060}
+    \definecolor{rouge}{HTML}{990000}
 
 % Assets path
 \usepackage{graphicx}
@@ -54,7 +56,7 @@
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{shapes}
+\usetikzlibrary{shapes,snakes}
 
 \usepackage{multicol}
 
@@ -100,6 +102,34 @@
         frame=single
     }
 
+\usepackage{titlesec}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{rouge}{|}\hsp}{0pt}{\Huge\bfseries}
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    allcolors=black,
+}
+
+\usepackage{SIunits}
+\usepackage{multirow}
+
+\usepackage{chngcntr} 
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+\lstset{numberbychapter=false}
+
+\usepackage[autostyle]{csquotes}
+\usepackage[
+    backend=biber,
+    doi=true,
+    sorting=none
+]{biblatex}
+\addbibresource{references.bib}
+
+\usepackage{listingsutf8}
+    
 % Header/footer
 \usepackage{fancyhdr}
     \fancypagestyle{utt}{
