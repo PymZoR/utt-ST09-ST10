@@ -22,13 +22,13 @@
             \setcellgapes{4pt}
             \makegapedcells
             {\color{white}\begin{tabularx}{15cm}{XX}
-                \textbf{Nom, Prénom :} \@author& \textbf{Branche :} \@branch \\
+                \textbf{Nom, Prénom :} \@author& \textbf{Cursus :} \@cursus \\
                 \textbf{Responsable Pédagogique :} \newline \@schooltutor & \textbf{Semestre :} \@semester\ \@date
             \end{tabularx}}
         \end{large}
         \makeatother
     \end{textblock*}
-
+    
     % Abstract
     \begin{textblock*}{15cm}(3cm,12cm)
         \begin{large}
@@ -46,7 +46,7 @@
 		\setlength\columnsep{2cm}
         \begin{multicols}{2}
             \begin{large}
-                \noindent \textbf{Entreprise :} \makeatletter \@companyname \makeatother\\
+                \noindent \textbf{Organisme :} \makeatletter \@companyname \makeatother\\
                 \textbf{Lieu :} \makeatletter \@companyplace \makeatother\\
                 \textbf{Responsable :} \makeatletter \@companytutor \makeatother
 

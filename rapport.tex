@@ -1,0 +1,49 @@
+\documentclass[11pt]{report}
+
+\usepackage{lib/utt-report-template}
+\usepackage{lipsum}
+
+\author{Jean C4stex}
+\date{2021}
+\title{Rapport de stage ST30: \\ Quelques pages pour avoir mes crédits} % Max 144 chars
+
+\schooltutor{T. Toury}
+\semester{Printemps}
+\cursus{(S)RT - IMEDD}
+\abstracttext{
+    \lipsum[1]
+} % Max 150 words
+
+\companyname{Nom de l'organisme d'acceuil}
+\companyplace{Sion}
+\companytutor{Nom du/des tuteur(s)}
+\companylogo{}
+
+\keywordone{Logo BDE}
+\keywordtwo{L'est éclair}
+\keywordthree{CrunchTime}
+\keywordfour{Ulisse}
+
+\begin{document}
+    \lstset{inputencoding=utf8/latin1}
+    
+    \frontpage
+    \include{parts/00-remerciements}
+    \pagenumbering{arabic}
+    \tableofcontents
+
+    \include{parts/01-introduction}
+    \include{parts/02-presentation}
+    \include{parts/03-problematique}
+    \include{parts/04-revuelitterature}
+    \include{parts/05-contribution}
+    \include{parts/06-discussion}
+    \include{parts/07-conclusion}
+
+    \nocite{*}
+    
+    \printbibliography[title={Références},heading=bibintoc]
+    
+    \appendix
+    \include{parts/08-annexes}
+\end{document}
